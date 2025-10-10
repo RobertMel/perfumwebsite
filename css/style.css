@@ -167,3 +167,157 @@ body{
   .brand h1 { font-size:20px; }
   .products-grid { grid-template-columns: repeat(2,1fr); }
 }
+.product-card {
+  background: var(--paper);
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* pour que l'image reste dans la card */
+}
+
+.product-photo {
+  width: 100%;
+  height: 200px;          /* ajuste la hauteur selon tes besoins */
+  object-fit: cover;      /* remplissage complet de la zone */
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 10px;
+}
+/* Panier */
+#cart {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  padding: 16px;
+  font-size: 14px;
+  z-index: 1000;
+}
+#cart h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+#cart-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+#cart-items button {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 6px;
+}
+
+.add-to-cart {
+  margin-top: auto;
+  padding: 8px 12px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.add-to-cart:hover {
+  background: #a86d5d;
+}
+
+#checkout {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: green;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+#clear-cart {
+  margin-top: 6px;
+  padding: 6px 12px;
+  background: #ccc;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+/* === COFFRET CARD IMAGE FIX === */
+.coffret-card {
+  background: var(--paper);
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: left;
+}
+
+.coffret-card img {
+  width: 100%;
+  height: 220px;           /* ajuste la hauteur selon ton besoin */
+  object-fit: cover;       /* remplit sans déformer */
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 10px;
+}
+
+.coffret-card .product-name {
+  font-weight: 700;
+  font-size: 15px;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.coffret-card .product-meta {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.coffret-card .price {
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--accent);
+  margin-top: auto;
+}
+
+.coffret-card .add-to-cart {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.coffret-card .add-to-cart:hover {
+  background: #a86d5d;
+}
+.product-card.small img.product-photo {
+  width: 100%;
+  height: 180px;          /* légèrement plus petit pour les laits */
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 10px;
+}
